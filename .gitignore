@@ -1,0 +1,5 @@
+*.class
+axbaseHost/bin
+axbaseProtocol/bin
+R.java
+axbasePlugin/bin
