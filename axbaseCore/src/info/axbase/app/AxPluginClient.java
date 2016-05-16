@@ -1,3 +1,8 @@
+/*
+ * Axbase Project
+ * Copyright (c) 2016 chunquedong
+ * Licensed under the LGPL(http://www.gnu.org/licenses/lgpl.txt), Version 3
+ */
 package info.axbase.app;
 
 import info.axbase.plugin.AxPluginManager;
@@ -13,19 +18,19 @@ import android.content.Intent;
 public class AxPluginClient extends PluginClient {
 	private AxPluginManager plugMgr;
 	private Map<String, String> plugMap = new HashMap<String, String>();
-	
+
 	@Override
 	protected void onInit(Context context) {
 		plugMgr = AxPluginManager.getInstance();
 		plugMgr.init(context);
 	}
-	
+
 	@Override
 	protected void uninstall(String id) {
 		String pkgName = plugMap.get(id);
 		plugMgr.removePlugin(pkgName);
 	}
-	
+
 	@Override
 	protected void install(String file, String id) {
 		try {
@@ -35,12 +40,12 @@ public class AxPluginClient extends PluginClient {
 			e.printStackTrace();
 		}
 	}
-	
+
 	protected boolean isInstalled(String id) {
 		String pkgName = plugMap.get(id);
 		return plugMgr.getPlugin(pkgName) != null;
 	}
-	
+
 	@Override
 	public boolean startMainActivity(Context context, String id) {
 		String pkgName = plugMap.get(id);
