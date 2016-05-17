@@ -12,7 +12,7 @@ axbasePlugin是轻量级Android插件化开发框架。能实现在不重新安�
 - 最小化Hook系统私有API数量，运行更稳定
 - 插件库大小不到60k，极致体积
 
-#Srouce Code
+#Source Code
 - 源码中axbaseCore为插件框架的核心代码。
 - axbaseHostApp和axbasePlugin分别为宿主Demo和插件Demo。
 - 其中axbaseHostApp为AndroidStudio项目，其他为EclipseADT项目。
